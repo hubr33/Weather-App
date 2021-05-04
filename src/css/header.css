@@ -1,0 +1,23 @@
+header {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  z-index: 1;
+}
+
+header div.appName {
+  color: white;
+  font-family: "Krona One", sans-serif;
+  font-size: 32px;
+  width: 100%;
+  margin-left: 2%;
+  margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+  header div.appName {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=header.css.map */

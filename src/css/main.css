@@ -1,0 +1,400 @@
+main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/backgroundImg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+main .appWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 80%;
+  min-height: 70%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+main .appWrapper .cityAndInputWrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+}
+
+main .appWrapper .cityAndInputWrapper .city-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 30%;
+  margin-left: 1%;
+  height: 100%;
+  color: white;
+  font-size: 30px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+main .appWrapper .cityAndInputWrapper .input-container {
+  width: 40%;
+  height: 100%;
+  margin-left: 50px;
+}
+
+main .appWrapper .cityAndInputWrapper .input-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+main .appWrapper .cityAndInputWrapper .input-container form input {
+  width: 60%;
+  height: 60%;
+  outline: none;
+  border: none;
+  font-family: "Noto Sans", sans-serif;
+  padding: 6px 20px;
+  border-radius: 6px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+main .appWrapper .cityAndInputWrapper .input-container form button {
+  padding: 6px 20px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  font-family: "Noto Sans", sans-serif;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+
+main .appWrapper .cityAndInputWrapper .input-container form button:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+main .appWrapper .cityAndInputWrapper .units {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .appWrapper .cityAndInputWrapper .units .metric,
+main .appWrapper .cityAndInputWrapper .units .imperial {
+  color: white;
+  font-size: 14px;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  padding: 4px 22px;
+}
+
+main .appWrapper .cityAndInputWrapper .units .metric:hover,
+main .appWrapper .cityAndInputWrapper .units .imperial:hover {
+  cursor: pointer;
+}
+
+main .appWrapper .weatherInformation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  bottom: 0;
+  border-end-end-radius: 20px;
+  border-end-start-radius: 20px;
+}
+
+main .appWrapper .weatherInformation .dateInfo {
+  position: absolute;
+  top: 0;
+  color: white;
+  font-size: 22px;
+  text-transform: uppercase;
+  font-family: "Noto Sans", sans-serif;
+}
+
+main .appWrapper .weatherInformation .temp,
+main .appWrapper .weatherInformation .mainAndSunset,
+main .appWrapper .weatherInformation .pressureAndSpeed {
+  width: 30%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  color: whitesmoke;
+}
+
+main .appWrapper .weatherInformation .temp .currentWeather,
+main .appWrapper .weatherInformation .temp .currentTemp,
+main .appWrapper .weatherInformation .temp .currentFeelingTemp {
+  position: relative;
+  width: 100%;
+  height: 33%;
+}
+
+main .appWrapper .weatherInformation .temp .currentWeather p,
+main .appWrapper .weatherInformation .temp .currentTemp p,
+main .appWrapper .weatherInformation .temp .currentFeelingTemp p {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  text-align: center;
+  font-size: 16px;
+}
+
+main .appWrapper .weatherInformation .temp .currentWeather p:nth-child(2),
+main .appWrapper .weatherInformation .temp .currentTemp p:nth-child(2),
+main .appWrapper .weatherInformation .temp .currentFeelingTemp p:nth-child(2) {
+  position: absolute;
+  width: 100%;
+  top: 35%;
+  height: 50%;
+  text-align: center;
+  font-size: 30px;
+  border-bottom: 1px solid whitesmoke;
+}
+
+main .appWrapper .weatherInformation .temp .currentFeelingTemp p:nth-child(2):nth-child(2) {
+  border: none;
+}
+
+main .appWrapper .weatherInformation .mainAndSunset .currentSunrise,
+main .appWrapper .weatherInformation .mainAndSunset .currentSunset,
+main .appWrapper .weatherInformation .mainAndSunset .currentHumidity {
+  position: relative;
+  width: 100%;
+  height: 33%;
+}
+
+main .appWrapper .weatherInformation .mainAndSunset .currentSunrise p,
+main .appWrapper .weatherInformation .mainAndSunset .currentSunset p,
+main .appWrapper .weatherInformation .mainAndSunset .currentHumidity p {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  text-align: center;
+  font-size: 16px;
+}
+
+main .appWrapper .weatherInformation .mainAndSunset .currentSunrise p:nth-child(2),
+main .appWrapper .weatherInformation .mainAndSunset .currentSunset p:nth-child(2),
+main .appWrapper .weatherInformation .mainAndSunset .currentHumidity p:nth-child(2) {
+  position: absolute;
+  width: 100%;
+  top: 35%;
+  height: 50%;
+  text-align: center;
+  font-size: 30px;
+  border-bottom: 1px solid whitesmoke;
+}
+
+main .appWrapper .weatherInformation .mainAndSunset .currentHumidity p:nth-child(2):nth-child(2) {
+  border: none;
+}
+
+main .appWrapper .weatherInformation .pressureAndSpeed .currentPressure,
+main .appWrapper .weatherInformation .pressureAndSpeed .currentSpeed,
+main .appWrapper .weatherInformation .pressureAndSpeed .maxTemp {
+  position: relative;
+  width: 100%;
+  height: 33%;
+}
+
+main .appWrapper .weatherInformation .pressureAndSpeed .currentPressure p,
+main .appWrapper .weatherInformation .pressureAndSpeed .currentSpeed p,
+main .appWrapper .weatherInformation .pressureAndSpeed .maxTemp p {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  text-align: center;
+  font-size: 16px;
+}
+
+main .appWrapper .weatherInformation .pressureAndSpeed .currentPressure p:nth-child(2),
+main .appWrapper .weatherInformation .pressureAndSpeed .currentSpeed p:nth-child(2),
+main .appWrapper .weatherInformation .pressureAndSpeed .maxTemp p:nth-child(2) {
+  position: absolute;
+  width: 100%;
+  top: 35%;
+  height: 50%;
+  text-align: center;
+  font-size: 30px;
+  border-bottom: 1px solid whitesmoke;
+}
+
+main .appWrapper .weatherInformation .pressureAndSpeed .maxTemp p:nth-child(2):nth-child(2) {
+  border: none;
+}
+
+@media (max-width: 1024px) {
+  main {
+    min-height: 200vh;
+  }
+  main .appWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 180vh;
+  }
+  main .appWrapper .weatherInformation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .appWrapper .weatherInformation .temp,
+  main .appWrapper .weatherInformation .mainAndSunset,
+  main .appWrapper .weatherInformation .pressureAndSpeed {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    margin-top: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .appWrapper .weatherInformation .dateInfo {
+    top: -10%;
+    font-size: 16px;
+  }
+  main .appWrapper .weatherInformation .temp .currentWeather p:nth-child(2),
+  main .appWrapper .weatherInformation .temp .currentTemp p:nth-child(2),
+  main .appWrapper .weatherInformation .temp .currentFeelingTemp p:nth-child(2) {
+    font-size: 14px;
+  }
+  main .appWrapper .weatherInformation .mainAndSunset .currentSunrise p:nth-child(2),
+  main .appWrapper .weatherInformation .mainAndSunset .currentSunset p:nth-child(2),
+  main .appWrapper .weatherInformation .mainAndSunset .currentHumidity p:nth-child(2) {
+    font-size: 14px;
+  }
+  main .appWrapper .weatherInformation .pressureAndSpeed .currentPressure p:nth-child(2),
+  main .appWrapper .weatherInformation .pressureAndSpeed .currentSpeed p:nth-child(2),
+  main .appWrapper .weatherInformation .pressureAndSpeed .maxTemp p:nth-child(2) {
+    font-size: 14px;
+  }
+  main .appWrapper .cityAndInputWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .appWrapper .cityAndInputWrapper .input-container {
+    width: 100%;
+    text-align: center;
+    color: red;
+    margin: 0;
+  }
+  main .appWrapper .cityAndInputWrapper .input-container form button {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+  main {
+    min-height: 290vh;
+  }
+  main .appWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 250vh;
+  }
+  main .appWrapper .weatherInformation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .appWrapper .weatherInformation .temp,
+  main .appWrapper .weatherInformation .mainAndSunset,
+  main .appWrapper .weatherInformation .pressureAndSpeed {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    margin-top: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .appWrapper .weatherInformation .dateInfo {
+    top: -5%;
+    font-size: 16px;
+  }
+  main .appWrapper .weatherInformation .temp .currentWeather p:nth-child(2),
+  main .appWrapper .weatherInformation .temp .currentTemp p:nth-child(2),
+  main .appWrapper .weatherInformation .temp .currentFeelingTemp p:nth-child(2) {
+    font-size: 14px;
+  }
+  main .appWrapper .weatherInformation .mainAndSunset .currentSunrise p:nth-child(2),
+  main .appWrapper .weatherInformation .mainAndSunset .currentSunset p:nth-child(2),
+  main .appWrapper .weatherInformation .mainAndSunset .currentHumidity p:nth-child(2) {
+    font-size: 14px;
+  }
+  main .appWrapper .weatherInformation .pressureAndSpeed .currentPressure p:nth-child(2),
+  main .appWrapper .weatherInformation .pressureAndSpeed .currentSpeed p:nth-child(2),
+  main .appWrapper .weatherInformation .pressureAndSpeed .maxTemp p:nth-child(2) {
+    font-size: 14px;
+  }
+  main .appWrapper .cityAndInputWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .appWrapper .cityAndInputWrapper .input-container {
+    width: 100%;
+    text-align: center;
+    color: red;
+    margin: 0;
+  }
+  main .appWrapper .cityAndInputWrapper .input-container form button {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
